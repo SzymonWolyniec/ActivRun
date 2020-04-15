@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentArticleAdd"
+    android:background="@drawable/activrun_background"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+
+        android:layout_marginTop="20dp"
+        />
+
+    <EditText
+        android:id="@+id/articleAddTitleET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/addTitle"
+        android:gravity="center"
+        android:minWidth="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+
+        android:layout_marginTop="20dp"
+        />
+
+    <EditText
+        android:id="@+id/articleAddTextET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/addText"
+        android:gravity="center"
+        android:minWidth="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/author"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+
+        android:layout_marginTop="20dp"
+        />
+
+    <EditText
+        android:id="@+id/articleAddAuthorET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/addAuthor"
+        android:gravity="center"
+        android:minWidth="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/articleAddDateTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="01/01/2019"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+
+        android:layout_marginTop="10dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        >
+
+
+    <Button
+        android:id="@+id/articleAdminAddSave"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:text="@string/save"
+        android:background="@drawable/rounded_login_button"
+        android:layout_weight="1"
+
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="60dp"
+        />
+
+    <Button
+        android:id="@+id/articleAdminAddBack"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:text="@string/back"
+        android:background="@drawable/rounded_login_button"
+        android:layout_weight="1"
+
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentHistoryMap"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/fragmentMapMapView"
+            android:layout_width="match_parent"
+            android:layout_height="400dp" />
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/activrun_background"
+    >
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       >
+
+
+
+    <!--Główny dół-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="10dp"
+        >
+
+        <!--Główny lewo-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right"
+            >
+
+            <!--Główny lewo mały-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+
+                <!--Lewo 1-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <!--Lewo 1 Image-->
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="6dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/stop_watch"
+                        android:background="@android:color/transparent" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/time"
+                            android:textSize="11sp"
+                            android:textColor="@color/myTextColorGray"
+                            />
+
+                        <TextView
+                            android:id="@+id/showTimeDataTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00:00:00"
+                            android:textSize="16sp"
+                            android:textColor="@color/myTextColor"/>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!--Lewo 2-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <!--Lewo 2 Image-->
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="6dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/finish_flag"
+                        android:background="@android:color/transparent" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/distance"
+                            android:textSize="11sp"
+                            android:textColor="@color/myTextColorGray"
+                            />
+
+                        <TextView
+                            android:id="@+id/showDistanceDataTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.000 km"
+                            android:textSize="16sp"
+                            android:textColor="@color/myTextColor"/>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--Lewo 3-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <!--Lewo 3 Image-->
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="6dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/avearge_speed"
+                        android:background="@android:color/transparent" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/avgSpeed"
+                            android:textSize="11sp"
+                            android:textColor="@color/myTextColorGray"
+                            />
+
+                        <TextView
+                            android:id="@+id/showAvgSpeedDataTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00.00 km/h"
+                            android:textSize="16sp"
+                            android:textColor="@color/myTextColor"/>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!--Lewo 4-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!--Lewo 4 Image-->
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="6dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_calendar_menu_green"
+                        android:background="@android:color/transparent" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/startDate"
+                            android:textSize="11sp"
+                            android:textColor="@color/myTextColorGray"
+                            />
+
+                        <TextView
+                            android:id="@+id/showStartDateDataTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="01/01/2019  00:00"
+                            android:textSize="16sp"
+                            android:textColor="@color/myTextColor"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--Główny Prawo-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left"
+            >
+
+            <!--Główny prawy mały-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+
+               <!-- Prawo 1-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <!--Prawo 1 Image-->
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="6dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/stop_watch"
+                        android:background="@android:color/transparent" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/workoutTime"
+                            android:textSize="11sp"
+                            android:textColor="@color/myTextColorGray"
+                            />
+
+                        <TextView
+                            android:id="@+id/showWorkoutTimeDataTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00:00:00"
+                            android:textSize="16sp"
+                            android:textColor="@color/myTextColor"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Prawo 2-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+
+                    <!--Prawo 2 Image-->
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="6dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_calorie"
+                        android:background="@android:color/transparent" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/calories"
+                            android:textSize="11sp"
+                            android:textColor="@color/myTextColorGray"
+                            />
+
+                        <TextView
+                            android:id="@+id/showCaloriesDataTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="000 kcal"
+                            android:textSize="16sp"
+                            android:textColor="@color/myTextColor"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Prawo 3-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+
+                    <!--Prawo 3 Image-->
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="6dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/avearge_pace"
+                        android:background="@android:color/transparent" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/avgPace"
+                            android:textSize="11sp"
+                            android:textColor="@color/myTextColorGray"
+                            />
+
+                        <TextView
+                            android:id="@+id/showAvgPaceDataTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00:00 min/km"
+                            android:textSize="16sp"
+                            android:textColor="@color/myTextColor"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Prawo 4-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <!--Prawo 4 Image-->
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="6dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_calendar_menu"
+                        android:background="@android:color/transparent" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/stopDate"
+                            android:textSize="11sp"
+                            android:textColor="@color/myTextColorGray"
+                            />
+
+                        <TextView
+                            android:id="@+id/showStopDateDataTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="01/01/2019  00:01"
+                            android:textSize="16sp"
+                            android:textColor="@color/myTextColor"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/comment"
+                android:layout_marginRight="5dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/comment"
+                android:textColor="@color/myTextColor"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/showCommentDataTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu lacus dapibus, sollicitudin lorem sit amet, egestas tortor. "
+            android:textColor="@color/myTextColor"
+            android:textSize="16sp"
+
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            >
+
+        <Button
+            android:id="@+id/historyEditBtn"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:text="@string/edit"
+            android:background="@drawable/rounded_login_button"
+
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="60dp"
+            />
+
+        <Button
+            android:id="@+id/historyDeleteBtn"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:text="@string/delete"
+            android:background="@drawable/rounded_login_button"
+
+            android:layout_marginRight="20dp"
+            />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+   </LinearLayout>
+    </ScrollView>
+    </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

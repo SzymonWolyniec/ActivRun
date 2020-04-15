@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6DD5FA</color>
+    <color name="colorPrimaryDark">#6DD5FA</color>
+    <color name="colorAccent">#aa4444</color>
+    <color name="myTextColor">#3d3c3c</color>
+    <color name="myTextColorGray">#5b5b5b</color>
+    <color name="myBackground">#FFC6DAEF</color>
+    <color name="myScrollView">#c81b8cd8</color>
+    <color name="myFAB">#8c1b8cd8</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="red">#ff0000</color>
+    <color name="yellow">#fff700</color>
+    <color name="green">#04ff00</color>
+    <color name="blue">#0011ff</color>
+    <color name="magenta">#ff00ea</color>
+
+
+
+    <color name="backgroundColor1">#6DD5FA</color>
+    <color name="backgroundColor2">#4286f4</color>
+    <color name="backgroundColorTransparent1">#d86dd5fa</color>
+    <color name="backgroundColorTransparent2">#d84286f4</color>
+    <color name="buttonColor">#38ffffff</color>
+    <color name="underTextColor">#c8ffffff</color>
+
+
+
+</resources>

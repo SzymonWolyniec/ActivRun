@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".FragmentCalendar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activrun_background">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        >
+
+    <TextView
+        android:id="@+id/calendarMonth"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/buttonColor"
+        android:text="Date"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:gravity="center_horizontal"
+        />
+
+    <com.github.sundeepk.compactcalendarview.CompactCalendarView
+
+        android:id="@+id/compactcalendar_view"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:compactCalendarTargetHeight="400dp"
+        app:compactCalendarTextSize="20sp"
+
+        app:compactCalendarBackgroundColor="@color/buttonColor"
+        app:compactCalendarTextColor="@color/black"
+        app:compactCalendarCurrentSelectedDayBackgroundColor="#964286f4"
+
+        app:compactCalendarCurrentDayBackgroundColor="#96b71c1c"
+        app:compactCalendarMultiEventIndicatorColor="#00ffe1"
+        />
+
+
+        <TextView
+            android:id="@+id/calendarTitleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/myTextColor"
+            android:text="@string/noEventText"
+            android:layout_marginTop="10dp"
+            />
+
+
+        <Button
+            android:id="@+id/calendarAddEditBtn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/addEdit"
+            android:background="@drawable/rounded_login_button"
+
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            />
+
+
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

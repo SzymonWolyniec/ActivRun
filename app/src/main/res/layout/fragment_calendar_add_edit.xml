@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".FragmentCalendarAddEdit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activrun_background"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal"
+        >
+
+
+    <TextView
+        android:id="@+id/calendarShowDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="01/01/1970"
+        android:textSize="30sp"
+        android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+
+            android:layout_marginTop="20dp"
+            />
+
+        <EditText
+            android:id="@+id/calendarAddEditTitleET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/addTitle"
+            android:gravity="center"
+            android:minWidth="100dp"
+            android:maxLength="35"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notes"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+
+            android:layout_marginTop="20dp"
+            />
+
+        <EditText
+            android:id="@+id/calendarAddEditNotesET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/addNoteText"
+            android:gravity="center"
+            android:minWidth="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/colorInCalendar"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+
+            android:layout_marginTop="20dp"
+            />
+
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <RadioButton
+                android:id="@+id/calendarRed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textColor="@color/red"
+                android:textSize="40sp"
+                android:text="■"
+
+                />
+
+
+            <RadioButton
+                android:id="@+id/calendarYellow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+
+                android:textColor="@color/yellow"
+                android:textSize="40sp"
+                android:text="■"
+                />
+
+            <RadioButton
+                android:id="@+id/calendarGreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+
+                android:textColor="@color/green"
+                android:textSize="40sp"
+                android:text="■"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <RadioButton
+                android:id="@+id/calendarBlue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+
+                android:textColor="@color/blue"
+                android:textSize="40sp"
+                android:text="■"
+                />
+
+            <RadioButton
+                android:id="@+id/calendarMagenta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+
+                android:textColor="@color/magenta"
+                android:textSize="40sp"
+                android:text="■"
+                />
+        </LinearLayout>
+
+
+        </RadioGroup>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            >
+
+            <Button
+                android:id="@+id/calendarAddEditSaveBtn"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:text="@string/addNote"
+                android:background="@drawable/rounded_login_button"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+
+
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="60dp"
+                />
+
+            <Button
+                android:id="@+id/calendarAddEditBackBtn"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:text="@string/back"
+                android:background="@drawable/rounded_login_button"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+
+                android:layout_marginRight="20dp"
+                />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/calendarAddEditRemoveBtn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/removeNote"
+            android:background="@drawable/rounded_login_button"
+
+            android:layout_marginLeft="120dp"
+            android:layout_marginRight="120dp"
+            />
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

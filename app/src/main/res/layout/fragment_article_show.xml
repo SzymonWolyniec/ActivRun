@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".FragmentArticleShow"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activrun_background">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            >
+
+            <TextView
+                android:id="@+id/articleShowTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+
+                android:text="Article Title"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                />
+
+            <TextView
+                android:id="@+id/articleShowDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity=""
+
+                android:text="01/01/2019"
+                android:textSize="12sp"
+                android:textColor="@color/myTextColor"
+
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                />
+
+
+            <TextView
+                android:id="@+id/articleShowText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id lacus et nisl porttitor sagittis. Curabitur consectetur luctus risus vel efficitur. Aliquam condimentum lacinia diam in malesuada. Duis dapibus ante ante, nec lobortis enim interdum sit amet. Quisque non orci eget felis mattis convallis. Praesent et augue nisl. Aliquam eu risus dui. Etiam rutrum, nibh quis condimentum ornare, ante massa dapibus lorem, et vulputate neque magna a leo. "
+                android:textSize="16sp"
+                android:textColor="@color/black"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                />
+
+            <TextView
+                android:id="@+id/articleShowAuthor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+
+                android:text="~ Szymon"
+                android:textSize="16sp"
+                android:textColor="@color/myTextColor"
+
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                />
+
+
+            <Button
+                android:id="@+id/articleShowBackBtn"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="@drawable/rounded_login_button"
+                android:text="@string/back"
+
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

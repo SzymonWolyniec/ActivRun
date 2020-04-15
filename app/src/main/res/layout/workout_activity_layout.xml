@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".WorkoutActivity"
+    android:keepScreenOn="true"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+    <fragment
+
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/noLocationDataTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_above="@id/buttonHorizontal"
+
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+
+                    android:textColor="@color/red"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/playButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_toLeftOf="@id/buttonHorizontal"
+                    android:layout_marginBottom="10dp"
+                    app:fabCustomSize="60dp"
+                    android:layout_above="@id/scrollView"
+                    app:backgroundTint="@color/backgroundColorTransparent1"
+                    app:elevation="0dp"
+                    app:pressedTranslationZ="0dp"
+                    app:borderWidth="2dp"
+                    android:src="@drawable/ic_play"
+                    />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/pauseButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_toLeftOf="@id/buttonHorizontal"
+                    android:layout_marginBottom="10dp"
+                    app:fabCustomSize="60dp"
+                    android:layout_above="@id/scrollView"
+                    app:backgroundTint="@color/backgroundColorTransparent1"
+                    app:elevation="0dp"
+                    app:pressedTranslationZ="0dp"
+                    app:borderWidth="2dp"
+                    android:src="@drawable/ic_pause"
+                    />
+
+                <Button
+                    android:id="@+id/buttonHorizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+
+                    android:layout_above="@id/scrollView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:visibility="invisible"
+                    />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/stopButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/buttonHorizontal"
+                    android:layout_above="@id/scrollView"
+                    android:layout_marginBottom="10dp"
+                    app:fabCustomSize="60dp"
+                    app:borderWidth="2dp"
+
+
+                    android:visibility="invisible"
+                    app:backgroundTint="@color/backgroundColorTransparent1"
+                    app:elevation="0dp"
+                    app:pressedTranslationZ="0dp"
+                    android:src="@drawable/ic_stop"
+                    />
+
+
+                <ScrollView
+                    android:id="@+id/scrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/activrun_background_transparent">
+
+
+                    <!--Główne-->
+                    <LinearLayout
+                        android:id="@+id/layoutResize"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+
+                    <!--Główny dół-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_marginTop="5dp">
+
+                    <!--Główny lewo-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:layout_marginLeft="20dp">
+
+                        <!--Główny lewo mały-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_gravity="bottom"
+                            android:orientation="vertical">
+
+                            <!--Distance-->
+                            <LinearLayout
+                                android:id="@+id/distanceShowHide"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="horizontal">
+
+                                <!--Distance Image-->
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="6dp"
+                                    android:background="@android:color/transparent"
+                                    android:src="@drawable/finish_flag" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/distance"
+                                        android:textColor="@color/myTextColorGray"
+                                        android:textSize="11sp" />
+
+                                    <TextView
+                                        android:id="@+id/distanceTV"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0.000 km"
+                                        android:textColor="@color/myTextColor"
+                                        android:textSize="16sp" />
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <!--Lewo 1-->
+                            <LinearLayout
+                                android:id="@+id/timeShowHide"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="horizontal">
+
+                                <!--Lewo 1 Image-->
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="6dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/stop_watch"
+                                    android:background="@android:color/transparent" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/time"
+                                        android:textSize="11sp"
+                                        android:textColor="@color/myTextColorGray"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/timeTV"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="00:00:00"
+                                        android:textSize="16sp"
+                                        android:textColor="@color/myTextColor"/>
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                            <!--Lewo 2-->
+                            <LinearLayout
+                                android:id="@+id/speedShowHide"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="horizontal">
+
+                                <!--Lewo 2 Image-->
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="6dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/avearge_speed"
+                                    android:background="@android:color/transparent" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/speed"
+                                        android:textSize="11sp"
+                                        android:textColor="@color/myTextColorGray"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/speedTV"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="00.00 km/h"
+                                        android:textSize="16sp"
+                                        android:textColor="@color/myTextColor"/>
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                            <!-- Lewo 3-->
+                            <LinearLayout
+                                android:id="@+id/avgSpeedShowHide"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="horizontal">
+
+
+                                <!--Lewo 3 Image-->
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="6dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/avearge_pace"
+                                    android:background="@android:color/transparent" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/avgSpeed"
+                                        android:textSize="11sp"
+                                        android:textColor="@color/myTextColorGray"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/avgSpeedTV"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="00:00 min/km"
+                                        android:textSize="16sp"
+                                        android:textColor="@color/myTextColor"/>
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <!--Lewo 4-->
+                            <LinearLayout
+                                android:id="@+id/caloriesShowHide"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="horizontal">
+
+
+                                <!--Lewo 4 Image-->
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="6dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_calorie"
+                                    android:background="@android:color/transparent" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/calories"
+                                        android:textSize="11sp"
+                                        android:textColor="@color/myTextColorGray"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/caloriesTV"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="000 kcal"
+                                        android:textSize="16sp"
+                                        android:textColor="@color/myTextColor"/>
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <!--Główny Prawo-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="left">
+
+                        <!--Główny prawy mały-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="bottom"
+                            android:orientation="vertical">
+
+                            <!--Czas minimum-->
+                            <LinearLayout
+                                android:id="@+id/timeMinShowHide"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                <!--Czas minimum Image-->
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="6dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/stop_watch"
+                                    android:background="@android:color/transparent" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/workoutTime"
+                                        android:textSize="11sp"
+                                        android:textColor="@color/myTextColorGray"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/timeMinTV"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="00:00:00"
+                                        android:textSize="16sp"
+                                        android:textColor="@color/myTextColor"/>
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <!-- Prawo 1-->
+                            <LinearLayout
+                                android:id="@+id/workoutTimeShowHide"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="horizontal">
+
+                                <!--Prawo 1 Image-->
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="6dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/stop_watch"
+                                    android:background="@android:color/transparent" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/workoutTime"
+                                        android:textSize="11sp"
+                                        android:textColor="@color/myTextColorGray"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/workoutTimeTV"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="00:00:00"
+                                        android:textSize="16sp"
+                                        android:textColor="@color/myTextColor"/>
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <!--Prawo 2-->
+                            <LinearLayout
+                                android:id="@+id/paceShowHide"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="horizontal">
+
+                                <!--Prawo 2 Image-->
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="6dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/avearge_speed"
+                                    android:background="@android:color/transparent" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/pace"
+                                        android:textSize="11sp"
+                                        android:textColor="@color/myTextColorGray"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/paceTV"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="00.00 km/h"
+                                        android:textSize="16sp"
+                                        android:textColor="@color/myTextColor"/>
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <!-- Prawo 3-->
+                            <LinearLayout
+                                android:id="@+id/avgPaceShowHide"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="horizontal">
+
+
+                                <!--Prawo 3 Image-->
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="6dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/avearge_pace"
+                                    android:background="@android:color/transparent" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/avgPace"
+                                        android:textSize="11sp"
+                                        android:textColor="@color/myTextColorGray"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/avgPaceTV"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="00:00 min/km"
+                                        android:textSize="16sp"
+                                        android:textColor="@color/myTextColor"/>
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <!-- Prawo 4-->
+                            <LinearLayout
+                                android:id="@+id/caloriesHourShowHide"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="horizontal">
+
+
+                                <!--Prawo 4 Image-->
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="6dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_calorie"
+                                    android:background="@android:color/transparent" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/caloriesHour"
+                                        android:textSize="11sp"
+                                        android:textColor="@color/myTextColorGray"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/caloriesHourTV"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="000 kcal"
+                                        android:textSize="16sp"
+                                        android:textColor="@color/myTextColor"/>
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+
+                </ScrollView>
+
+            </RelativeLayout>
+
+
+    </fragment>
+
+
+
+
+
+
+
+</LinearLayout>

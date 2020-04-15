@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".FragmentHistoryEdit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/activrun_background">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+
+    <!--Time-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="6dp"
+            android:layout_gravity="center"
+            android:src="@drawable/stop_watch"
+            android:background="@android:color/transparent" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time"
+                android:textSize="16sp"
+                android:textColor="@color/myTextColor"
+                />
+
+
+            <EditText
+                android:id="@+id/historyEditTimeHours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLines="1"
+                android:maxLength="2"
+                android:text="00"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" :"
+                android:textSize="16sp"
+                android:textColor="@color/myTextColor"/>
+
+            <EditText
+                android:id="@+id/historyEditTimeMinutes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLines="1"
+                android:maxLength="2"
+                android:text="00"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" :"
+                android:textSize="16sp"
+                android:textColor="@color/myTextColor"/>
+
+            <EditText
+                android:id="@+id/historyEditTimeSeconds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLines="1"
+                android:maxLength="2"
+                android:text="00"/>
+
+
+    </LinearLayout>
+
+
+    <!--Workout Time-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="6dp"
+            android:layout_gravity="center"
+            android:src="@drawable/stop_watch"
+            android:background="@android:color/transparent" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/workoutTime"
+                android:textSize="16sp"
+                android:textColor="@color/myTextColor"
+                />
+
+        <EditText
+            android:id="@+id/historyEditWorkoutTimeHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLines="1"
+            android:maxLength="2"
+            android:text="00"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" :"
+            android:textSize="16sp"
+            android:textColor="@color/myTextColor"/>
+
+        <EditText
+            android:id="@+id/historyEditWorkoutTimeMinutes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLines="1"
+            android:maxLength="2"
+            android:text="00"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" :"
+            android:textSize="16sp"
+            android:textColor="@color/myTextColor"/>
+
+        <EditText
+            android:id="@+id/historyEditWorkoutTimeSeconds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLines="1"
+            android:maxLength="2"
+            android:text="00"/>
+
+    </LinearLayout>
+
+
+    <!--Distance-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="6dp"
+            android:layout_gravity="center"
+            android:src="@drawable/finish_flag"
+            android:background="@android:color/transparent" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/distance"
+                android:textSize="16sp"
+                android:textColor="@color/myTextColor"
+                />
+
+        <EditText
+            android:id="@+id/historyEditKilometers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:maxLength="8"
+            android:text="0000.000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" km"
+                android:textSize="16sp"
+                android:textColor="@color/myTextColor"/>
+
+    </LinearLayout>
+
+
+    <!-- Calories-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="6dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_calorie"
+            android:background="@android:color/transparent" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calories"
+                android:textSize="16sp"
+                android:textColor="@color/myTextColor"
+                />
+
+            <EditText
+                android:id="@+id/historyEditCalories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLines="1"
+                android:maxLength="4"
+                android:text="000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" kcal"
+                android:textSize="16sp"
+                android:textColor="@color/myTextColor"/>
+
+    </LinearLayout>
+
+
+    <!--Comment-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/comment"
+        android:layout_marginRight="5dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/comment"
+        android:textColor="@color/myTextColor"
+        android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/historyEditComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu lacus dapibus, sollicitudin lorem sit amet, egestas tortor. "
+        android:gravity="center"
+        android:minWidth="100dp"
+        android:maxLength="300"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <Button
+        android:id="@+id/historyEditSaveBtn"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="@string/save"
+        android:background="@drawable/rounded_login_button"
+
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

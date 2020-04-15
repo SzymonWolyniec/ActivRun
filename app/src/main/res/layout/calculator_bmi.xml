@@ -1,0 +1,112 @@
+<android.support.v7.widget.CardView style="@style/calculator_cardview"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    app:cardCornerRadius="20dp"
+    app:cardBackgroundColor="@color/buttonColor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="#00ffffff"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/bmiCalcTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+
+            android:text="@string/bmiCalcTV"
+            android:textSize="20dp"
+            android:textColor="@color/myTextColor"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/heightBMI"
+                />
+
+            <EditText
+                android:id="@+id/bmiHeightET"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:inputType="number"
+                android:maxLines="1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="cm"/>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/weightBMI"
+                />
+
+            <EditText
+                android:id="@+id/bmiWeightET"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="kg"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/bmiBMITV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:text= "@string/bmi"
+            android:layout_marginTop="5dp"
+            />
+
+        <Button
+            android:id="@+id/bmiCalcBtn"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:text="@string/calculateIt"
+            android:background="@drawable/rounded_button_stroke"
+
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginRight="120dp" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
